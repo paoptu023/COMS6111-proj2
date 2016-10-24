@@ -3,8 +3,7 @@ import json
 import base64
 
 
-def query_bing(enc_site, enc_query):
-    account_key = 'VpF0+1+uCEJrUKT5cFOV7eeG8cowehPtdV+sgVA4Tw0'
+def query_bing(enc_site, enc_query, account_key):
     account_key_enc = base64.b64encode(account_key+':'+account_key)
     headers = {'Authorization': 'Basic '+account_key_enc}
     bing_url = 'https://api.datamarket.azure.com/Data.ashx/Bing/SearchWeb/v1/Composite?Query=%27site%3a'+enc_site+'%20'+enc_query+'%27&$top=1&$format=json'
@@ -27,12 +26,11 @@ def compose_prob(filename):
     return class_dict
 
 
-def classify(category, site, tec, tes, path):
+def classify(account_key, category, site, tec, tes, path):
     try:
         probes = compose_prob(category.lower()+'.txt')
     except Exception:
         return path
-
     cov = {}
     spec = {}
     for subcategory in probes.keys():
@@ -40,29 +38,31 @@ def classify(category, site, tec, tes, path):
             cov[subcategory] = 0
             spec[subcategory] = 0.0
         for prob in probes[subcategory]:
-            num = float(query_bing(site,prob))
-            print prob, num
+            num = int(query_bing(site,prob, account_key))
             cov[subcategory] += num
+            #print subcategory, prob, num, cov[subcategory]
 
-    total = sum(cov.values())
+    total = float(sum(cov.values()))
 
     for subcategory in spec.keys():
         spec[subcategory] = cov[subcategory]/total
-    print cov, spec, total
-    sub = []
-    for subcategory in spec.keys():
-        if spec[subcategory]>tes and cov[subcategory]>tec:
-            sub.append(subcategory)
-    print sub
+        print 'for ', subcategory, ' : '
+        print '     Specificity : ', spec[subcategory]
+        print '     Coverage    : ', cov[subcategory]
+        if spec[subcategory] > tes and cov[subcategory] > tec:
+            path = classify(account_key, subcategory, site, tec, tes, path + '/' + subcategory)
 
-    if len(sub) != 0:
-        for subc in sub:
-            path = classify(subc.lower(), site, tec, tes, path+'/'+subc.lower())
     return path
 
 if __name__ == "__main__":
-    site = 'diabetes.org'
+    sites = ['health.com', 'fifa.com', 'hardwarecentral.com', 'diabetes.org', 'yahoo.com']
+    # Right: 'health.com', 'fifa.com', 'hardwarecentral.com', 'diabetes.org'
+    # Wrong: 'yahoo.com' : Root/Sports -- Root/Sports/Basketball
     tec = 100
     tes = 0.6
-    path = ''
-    print classify('root', site, tec, tes, 'root')
+    account_key = 'VpF0+1+uCEJrUKT5cFOV7eeG8cowehPtdV+sgVA4Tw0'
+    for site in sites:
+        print 'Classifying...'
+        cate = classify(account_key, 'root', site, tec, tes, 'Root')
+        print 'Classification: ', cate
+        print ''
