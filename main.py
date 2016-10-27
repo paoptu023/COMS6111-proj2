@@ -17,7 +17,6 @@ def query_bing(enc_site, enc_query, sub_sample, account_key):
     # line = subcategory + ' ' + str(num) + ' ' + enc_query
     for i in range(min(len(result['d']['results'][0]['Web']), 4)):
         address = result['d']['results'][0]['Web'][i]['Url']
-        print 'Getting page:', address
         sub_sample.add(str(address))
         # line += ' ' + address
     # file_h.write(line + '\n')
@@ -59,8 +58,8 @@ def classify(account_key, category, site, tec, tes, path, doc_dic, cache):
         return path
     cov = {}
     spec = {}
+    doc_dic[path] = set()
     for subcategory in probes.keys():
-        sub_sample = set()
         if subcategory not in cov:
             cov[subcategory] = 0
             spec[subcategory] = 0.0
@@ -68,9 +67,8 @@ def classify(account_key, category, site, tec, tes, path, doc_dic, cache):
             # num = query_bing(site, prob, sub_sample, account_key)
             num = float(cache[prob][0])
             for i in range(1, len(cache[prob])):
-                sub_sample.add(cache[prob][i])
+                doc_dic[path].add(cache[prob][i])
             cov[subcategory] += num
-        doc_dic[path + '/' + subcategory] = sub_sample
 
     total = float(sum(cov.values()))
 
@@ -106,7 +104,6 @@ if __name__ == "__main__":
         cate = classify(account_key, 'Root', site, tec, tes, 'Root', doc_dic, cache)
         file_h.close()
         print 'Classification: ' + cate + '\n'
-        print 'Creating content summary...'
         doc_sample = combine_set(doc_dic)
         for node in doc_sample.keys():
             print node, len(doc_sample[node])

@@ -4,33 +4,39 @@ import re
 
 def generate_summary(doc_sample, path, site):
     nodes = path.split('/')
-    for i in range(min(len(nodes), 2)):
-        file = open(nodes[i] + '-' + site + '.txt', 'w')
+    nodes.reverse()
+    for i in range(len(nodes)):
+        print 'Creating Content Summary for: ' + nodes[i]
+        f = open(nodes[i] + '-' + site + '.txt', 'w')
         content_summary = {}
         url_set = doc_sample[nodes[i]]
+        j = 1
         for url in url_set:
+            print str(j), '/', len(url_set), ' url'
+            j += 1
+            print 'Getting page:' + url + '\n'
             # process only html files
-            if url.split('.')[-1] == 'html':
-                # retrieve page content
-                page_content = ''
-                try:
-                    page_content = check_output("lynx --dump " + url, shell=True)
-                except Exception:
-                    pass
-                end = page_content.find('\nReferences\n')
-                if end > -1:
-                    page_content = page_content[:end]
+            # if url.split('.')[-1] == 'html':
+            # retrieve page content
+            page_content = ''
+            try:
+                page_content = check_output("lynx --dump " + url, shell=True)
+            except Exception:
+                pass
+            end = page_content.find('\nReferences\n')
+            if end > -1:
+                page_content = page_content[:end]
 
-                page_content = page_content.lower()
-                words = process_page(page_content)
-                for word in words:
-                    if word in content_summary:
-                        content_summary[word] += 1
-                    else:
-                        content_summary[word] = 1
+            page_content = page_content.lower()
+            words = process_page(page_content)
+            for word in words:
+                if word in content_summary:
+                    content_summary[word] += 1
+                else:
+                    content_summary[word] = 1
         for word in sorted(content_summary):
-            file.write(word + '#' + str(float(content_summary[word])) + '\n')
-        file.close()
+            f.write(word + '#' + str(float(content_summary[word])) + '\n')
+        f.close()
     return
 
 
