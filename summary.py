@@ -4,10 +4,9 @@ import re
 
 def generate_summary(doc_sample, path, site):
     nodes = path.split('/')
-    nodes.reverse()
-    for i in range(len(nodes)):
+    for i in range(min(len(nodes), 2)):
         print 'Creating Content Summary for: ' + nodes[i]
-        f = open(nodes[i] + '-' + site + '.txt', 'w')
+        f = open('./summary/' + nodes[i] + '-' + site + '.txt', 'w')
         content_summary = {}
         url_set = doc_sample[nodes[i]]
         j = 1
@@ -20,7 +19,7 @@ def generate_summary(doc_sample, path, site):
             # retrieve page content
             page_content = ''
             try:
-                page_content = check_output("lynx --dump " + url, shell=True)
+                page_content = check_output('lynx --dump \'' + url + '\'', shell=True)
             except Exception:
                 pass
             end = page_content.find('\nReferences\n')

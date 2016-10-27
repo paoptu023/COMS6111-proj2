@@ -1,0 +1,66 @@
+cpu 3510 http://www.hardwarecentral.com/showthread.php?185203-Intel-i7-5820K-vs-Intel-i7-4790K-BENCHMARKS http://www.hardwarecentral.com/forumdisplay.php?7-CPUs-and-Motherboards http://www.hardwarecentral.com/showthread.php?13454-CPUs-for-dummies http://www.hardwarecentral.com/showthread.php?163601-Best-Processor-for-Video-Encoding
+java 20 http://www.hardwarecentral.com/showthread.php?165087-Java-Runtime-1-3-1 http://www.hardwarecentral.com/showthread.php?184679-Java-version-7-Update-40 http://www.hardwarecentral.com/showthread.php?135162-JIT-must-be-enabled-hhmmm http://www.hardwarecentral.com/showthread.php?181916-Java-6-updte-7-won-t-UN-Install-Won-t-Install-update-13
+module 418 http://www.hardwarecentral.com/showthread.php?156748-Need-help-identifying-ram-module http://www.hardwarecentral.com/showthread.php?177486-Outlook-2003-crashing-on-Vista http://www.hardwarecentral.com/showthread.php?103428-EXPLORER-caused-a-general-protection-fault-in-module-USER-EXE http://www.hardwarecentral.com/showthread.php?154379-samsung-memory-warranty-support-info
+multimedia 59 http://www.hardwarecentral.com/showthread.php?184427-RESOLVED-Audio-Driver-for-Emachine-T3304 http://www.hardwarecentral.com/showthread.php?173429-Dell-Dimension-2350-Multimedia-Controller-(Audio) http://www.hardwarecentral.com/showthread.php?80868-Packard-Bell-Motherboard-Multimedia-854 http://www.hardwarecentral.com/showthread.php?178062-Installing-Drivers-for-Dell-Dimension-2350
+perl 4 http://www.hardwarecentral.com/showthread.php?159915-Popular-Open-Source-Alternatives http://www.hardwarecentral.com/showthread.php?39456-How-do-I-make-tables-using-HTML http://www.hardwarecentral.com/showthread.php?181334-downgrade-sony-vgn-fz150e-to-win-xp http://www.hardwarecentral.com/showthread.php?164537-Notebook-Video-Card-Drivers
+vb 13 http://www.hardwarecentral.com/showthread.php?92711-INKEY-function-in-VB http://www.hardwarecentral.com/showthread.php?45107-How-to-redirect-a-printer-port-(LPT)-to-a-file http://www.hardwarecentral.com/showthread.php?167406-Dell-XPS-(Gen-1)-Cooling-problems http://www.hardwarecentral.com/showthread.php?137159-Windows-XP-Auto-Shutdown-after-Defrag
+agp+card 519 http://www.hardwarecentral.com/showthread.php?32031-AGP-CARD-PROBLEMS http://www.hardwarecentral.com/showthread.php?19983-32-bit-AGP-card-for-3D-acceleration http://www.hardwarecentral.com/showthread.php?30462-best-value-agp-video-card-50-100-range http://www.hardwarecentral.com/showthread.php?108914-How-does-bus-frequency-affect-agp-speed
+application+windows 1950 http://www.hardwarecentral.com/showthread.php?153092-Faulting-application-rundll32-exe-HELP-PLEASE! http://www.hardwarecentral.com/showthread.php?183727-RESOLVED-Need-Help-installing-Windows-XP-on-Computer-with-Virus http://www.hardwarecentral.com/showthread.php?180313-RESOLVED-Windows-Problem-helpctr-exe-virus http://www.hardwarecentral.com/showthread.php?163677-WinDVD-faulting-application-iviaudio-ax-(WXP-Home)
+applet+code 10 http://www.hardwarecentral.com/showthread.php?135910-Slightly-Funny-Disclaimer http://www.hardwarecentral.com/showthread.php?165289-I-Need-A-Favor http://www.hardwarecentral.com/showthread.php?162712-Cannot-Join-Domain http://www.hardwarecentral.com/showthread.php?166510-Compaq-Laptop-wireless-BIOS-issues
+array+code 65 http://www.hardwarecentral.com/showthread.php?183923-RESOLVED-RAID5-problem-with-Adaptec-controller http://www.hardwarecentral.com/showthread.php?180789-RAID-5-Problems http://www.hardwarecentral.com/showthread.php?181191-RESOLVED-RAID-1-to-RAID-0 http://www.hardwarecentral.com/showthread.php?168248-HELP!-I-lost-my-RAID-5-array
+audio+file 1910 http://www.hardwarecentral.com/showthread.php?87838-Some-of-my-MP3-won-t-burn-to-a-CD http://www.hardwarecentral.com/showthread.php?175186-XP-Drivers-for-Toshiba-Laptop http://www.hardwarecentral.com/showthread.php?45107-How-to-redirect-a-printer-port-(LPT)-to-a-file http://www.hardwarecentral.com/showthread.php?149078-Whats-the-difference-between-avi-mpeg-wmv-quicktime-etc
+avi+file 16 http://www.hardwarecentral.com/showthread.php?149078-Whats-the-difference-between-avi-mpeg-wmv-quicktime-etc http://www.hardwarecentral.com/showthread.php?174730-AVI-to-DVD-with-Nero-7-Possible http://www.hardwarecentral.com/showthread.php?86932-Help!!-Need-DivX-addon!! http://www.hardwarecentral.com/showthread.php?175630-Video-Thumbnail-Issues-In-Vista
+bios 2620 http://www.hardwarecentral.com/showthread.php?79019-BIOS-deleted-how-to-restore http://www.hardwarecentral.com/showthread.php?183312-RESOLVED-Computer-randomly-freezes-in-POST-BIOS-and-Windows http://www.hardwarecentral.com/showthread.php?168566-BIOS-Flash http://www.hardwarecentral.com/showthread.php?158652-MSI-Beep-Codes
+buffer+code 41 http://www.hardwarecentral.com/showthread.php?174347-Buffer-underrun-(audio) http://www.hardwarecentral.com/showthread.php?181893-RESOLVED-WESTERN-DIGITAL-Caviar®-Green-WD10EADS-1TB-SATA-II-7200-RPM-32MB-Buffer-Hard-Drive-Bu http://www.hardwarecentral.com/showthread.php?159269-Buffer-Overrun-Detected http://www.hardwarecentral.com/showthread.php?39824-How-important-is-buffer-size-for-a-hard-drive
+bytes+code 27 http://www.hardwarecentral.com/showthread.php?178719-RESOLVED-Hard-Drive-size-by-calculation http://www.hardwarecentral.com/showthread.php?51821-What-does-a-partition-look-like http://www.hardwarecentral.com/showthread.php?183658-RESOLVED-block-vs-sector-vs-cluster http://www.hardwarecentral.com/showthread.php?166680-Whats-the-biggest-Size-hard-drive-i-can-use-with-XP
+shareware 18 http://www.hardwarecentral.com/showthread.php?91885-Expired-Sharewares-in-PC http://www.hardwarecentral.com/showthread.php?35028-Software-to-control-CD-ROM-read-speed http://www.hardwarecentral.com/showthread.php?163675-Is-WinZip-No-longer-free http://www.hardwarecentral.com/showthread.php?45107-How-to-redirect-a-printer-port-(LPT)-to-a-file
+card+drivers 1410 http://www.hardwarecentral.com/showthread.php?164537-Notebook-Video-Card-Drivers http://www.hardwarecentral.com/showthread.php?29376-what-is-a-reference-driver http://www.hardwarecentral.com/showthread.php?172934-How-to-identify-network-card http://www.hardwarecentral.com/showthread.php?183112-RESOLVED-I-Need-XP-graphic-card-drivers-for-ATI-Mobility-Radeon-4100
+card+graphics 1020 http://www.hardwarecentral.com/showthread.php?134472-Cleaning-contacts-PCI-card http://www.hardwarecentral.com/showthread.php?26193-Two-video-cards-one-monitor http://www.hardwarecentral.com/showthread.php?151275-Graphics-Memory http://www.hardwarecentral.com/showthread.php?164537-Notebook-Video-Card-Drivers
+card+pc 2880 http://www.hardwarecentral.com/showthread.php?134472-Cleaning-contacts-PCI-card http://www.hardwarecentral.com/showthread.php?164537-Notebook-Video-Card-Drivers http://www.hardwarecentral.com/showthread.php?15981-videocard http://www.hardwarecentral.com/showthread.php?182680-RESOLVED-Cannot-Read-Micro-SDHC-card
+pc+windows 4380 http://www.hardwarecentral.com/ http://www.hardwarecentral.com/showthread.php?175186-XP-Drivers-for-Toshiba-Laptop http://www.hardwarecentral.com/showthread.php?166565-RESOLVED-multiple-sound-cards-outputs-requried http://www.hardwarecentral.com/showthread.php?185021-My-PC-does-not-turn-on-immediately
+acupuncture 0
+aerobic 0
+aerobics 0
+aids 6 http://www.hardwarecentral.com/showthread.php?173552-Ademco-Passpoint-Swipe-Cards http://www.hardwarecentral.com/showthread.php?124291-Case-Motherboard-Compatibility http://www.hardwarecentral.com/showthread.php?5962-New-system http://www.hardwarecentral.com/showthread.php?142215-Day-2-IDF-NO-Prescott-WHEN
+cancer 4 http://www.hardwarecentral.com/showthread.php?104377-Can-I-assign-a-drive-letter-to-a-local-directory http://www.hardwarecentral.com/showthread.php?121099-thin-water-block http://www.hardwarecentral.com/showthread.php?138566-Unable-to-read-security-descriptor-data-stream http://www.hardwarecentral.com/showthread.php?176791-What-is-best-to-pick-up-a-weak-wifi-signal
+cardiology 0
+cholesterol 0
+diabetes 0
+diet 1 http://www.hardwarecentral.com/showthread.php?168958-Link-for-modded-ATi-AVIVO-video-converter-(works-on-all-cards)
+fitness 5 http://www.hardwarecentral.com/showthread.php?158960-Ultimate-Boot-CD-Ver-2-4-is-released http://www.hardwarecentral.com/showthread.php?171893-Removing-DDO http://www.hardwarecentral.com/showthread.php?182234-RESOLVED-SATA-IDE-Mix-Problem http://www.hardwarecentral.com/showthread.php?51555-July-15-2001-Computer-Specifications™
+hiv 1 http://www.hardwarecentral.com/showthread.php?63930-What-and-where-is-the-windows-2000-trial-version
+insulin 0
+nurse 1 http://www.hardwarecentral.com/showthread.php?180162-PassPoint-Express-v1-1-reinstall
+squats 0
+treadmill 1 http://www.hardwarecentral.com/showthread.php?139278-What-does-the-reset-button-do
+walkers 0
+calories+fat 0
+carb+carbs 0
+doctor+health 2 http://www.hardwarecentral.com/showthread.php?14690-CPU-Fan-Speed-(RPM) http://www.hardwarecentral.com/showthread.php?183736-RESOLVED-Hard-drive-clunk
+doctor+medical 0
+eating+fat 0
+fat+muscle 0
+health+medicine 0
+health+nutritional 0
+hospital+medical 0
+hospital+patients 0
+medical+patient 0
+medical+treatment 0
+patients+treatment 0
+laker 0
+ncaa 1 http://www.hardwarecentral.com/showthread.php?166457-i-saw-something-that-scares-me
+pacers 0
+soccer 1 http://www.hardwarecentral.com/showthread.php?41014-Which-country-invented-the-first-computer
+teams 10 http://www.hardwarecentral.com/showthread.php?18172-Descent-3-Demo-Commands http://www.hardwarecentral.com/showthread.php?127536-How-do-you-benchmark-Quake-3-(-in-other-words-how-do-you-see-how-much-FPS) http://www.hardwarecentral.com/showthread.php?88506-What-image-format-has-the-best-quality http://www.hardwarecentral.com/showthread.php?127555-Q2-in-OGL-on-Compaq-Laptop
+wnba 0
+nba 3 http://www.hardwarecentral.com/showthread.php?168774-Keymapper-for-USB-Controllers http://www.hardwarecentral.com/showthread.php?168910-I-hate-The-SIMS-2 http://www.hardwarecentral.com/showthread.php?35393-How-do-you-connect-a-joystick-to-a-laptop
+avg+league 0
+avg+nba 0
+ball+league 0
+ball+referee 0
+ball+team 9 http://www.hardwarecentral.com/showthread.php?153116-Ball-Bearing-vs-Hydro-Wave-Bearing http://www.hardwarecentral.com/showthread.php?141705-How-to-replace-CPU-pins http://www.hardwarecentral.com/showthread.php?171127-HD-S-M-A-R-T-status-bad-msg http://www.hardwarecentral.com/showthread.php?180408-CPU-fan-with-my-build-for-OCing
+blazers+game 0
+championship+team 1 http://www.hardwarecentral.com/showthread.php?127419-BEST-AUTO-RACING-SIM
+club+league 0
+fans+football 2 http://www.hardwarecentral.com/showthread.php?39394-Vote-on-the-Hardware-Central-Awards-(unofficial) http://www.hardwarecentral.com/showthread.php?166457-i-saw-something-that-scares-me
+game+league 1 http://www.hardwarecentral.com/showthread.php?179764-Cod4

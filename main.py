@@ -1,10 +1,11 @@
 import urllib2
 import json
 import base64
+import os.path
 import summary
 
 
-def query_bing(enc_site, enc_query, sub_sample, account_key):
+def query_bing(enc_site, enc_query, sample, account_key):
     account_key_enc = base64.b64encode(account_key+':'+account_key)
     headers = {'Authorization': 'Basic '+account_key_enc}
     bing_url = 'https://api.datamarket.azure.com/Data.ashx/Bing/SearchWeb/v1/Composite?Query=%27site%3a'+enc_site+'%20'+enc_query+'%27&$top=4&$format=json'
@@ -14,12 +15,13 @@ def query_bing(enc_site, enc_query, sub_sample, account_key):
     num = result['d']['results'][0]['WebTotal']
     
     # get top 4 pages returned by Bing
-    # line = subcategory + ' ' + str(num) + ' ' + enc_query
+    line = enc_query + ' ' + str(num)
     for i in range(min(len(result['d']['results'][0]['Web']), 4)):
         address = result['d']['results'][0]['Web'][i]['Url']
-        sub_sample.add(str(address))
-        # line += ' ' + address
-    # file_h.write(line + '\n')
+        address = address.encode('utf-8')
+        sample.add(address)
+        line += ' ' + address
+    query_cache.write(line + '\n')
     return float(num)
 
 
@@ -53,7 +55,7 @@ def combine_set(doc_dic):
 
 def classify(account_key, category, site, tec, tes, path, doc_dic, cache):
     try:
-        probes = compose_prob('./probes/' + category.lower()+'.txt')
+        probes = compose_prob('./query/' + category.lower()+'.txt')
     except Exception:
         return path
     cov = {}
@@ -64,10 +66,12 @@ def classify(account_key, category, site, tec, tes, path, doc_dic, cache):
             cov[subcategory] = 0
             spec[subcategory] = 0.0
         for prob in probes[subcategory]:
-            # num = query_bing(site, prob, sub_sample, account_key)
-            num = float(cache[prob][0])
-            for i in range(1, len(cache[prob])):
-                doc_dic[path].add(cache[prob][i])
+            if not cache:
+                num = query_bing(site, prob, doc_dic[path], account_key)
+            else:
+                num = float(cache[prob][0])
+                for i in range(1, len(cache[prob])):
+                    doc_dic[path].add(cache[prob][i])
             cov[subcategory] += num
 
     total = float(sum(cov.values()))
@@ -89,21 +93,30 @@ if __name__ == "__main__":
     # Wrong: 'yahoo.com' : Root/Sports -- Root/Sports/Basketball
     # account_key = 'VpF0+1+uCEJrUKT5cFOV7eeG8cowehPtdV+sgVA4Tw0'
     account_key = 'HIWkFhlcqfV0SsO9ac7smysylCtGDsuMVyqgSWPPDZI'
-    sites = ['diabetes.org']
+    sites = ['hardwarecentral.com']
     tec = 100
     tes = 0.6
 
     for site in sites:
-        print 'Classifying...'
-        file_h = open(site + '_query.txt', 'r')
+        print 'Classifying', site
+        file_path = './query/' + site + '_query.txt'
+
         cache = {}
-        for line in file_h:
-            words = line.split()
-            cache[words[2]] = [words[1]] + words[3:]
+        # use cached query history if file exists
+        if os.path.exists(file_path):
+            query_cache = open(file_path, 'r')
+            for line in query_cache:
+                words = line.split()
+                cache[words[0]] = [words[1]] + words[2:]
+        else:
+            query_cache = open(file_path, 'w')
+
         doc_dic = {}
         cate = classify(account_key, 'Root', site, tec, tes, 'Root', doc_dic, cache)
-        file_h.close()
+        query_cache.close()
         print 'Classification: ' + cate + '\n'
+
+        # create content summary
         doc_sample = combine_set(doc_dic)
         for node in doc_sample.keys():
             print node, len(doc_sample[node])
