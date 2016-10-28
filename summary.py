@@ -13,7 +13,7 @@ def generate_summary(doc_sample, path, site):
         for url in url_set:
             print str(j), '/', len(url_set), ' url'
             j += 1
-            print 'Getting page:' + url + '\n'
+            print 'Getting page: ' + url + '\n'
             # process only html files
             # if url.split('.')[-1] == 'html':
             # retrieve page content

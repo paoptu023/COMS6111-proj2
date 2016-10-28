@@ -55,8 +55,9 @@ def combine_set(doc_dic):
 
 def classify(account_key, category, site, tec, tes, path, doc_dic, cache):
     try:
-        probes = compose_prob('./query/' + category.lower()+'.txt')
+        probes = compose_prob('./query/' + category +'.txt')
     except Exception:
+        print "Probes file not found."
         return path
     cov = {}
     spec = {}
