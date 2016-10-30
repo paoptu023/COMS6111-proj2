@@ -101,7 +101,7 @@ def generate_summary(path):
             j += 1
             print 'Getting page: ' + url + '\n'
             # process only html files
-            if url.split('.')[-1] == 'html':
+            if url.split('.')[-1] != "pdf" and url.split('.')[-1] != "ppt":
                 # retrieve page content
                 page_content = ''
                 try:
