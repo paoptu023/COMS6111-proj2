@@ -34,8 +34,11 @@
 
 * Bing Search Account Key: 'HIWkFhlcqfV0SsO9ac7smysylCtGDsuMVyqgSWPPDZI' or 'VpF0+1+uCEJrUKT5cFOV7eeG8cowehPtdV+sgVA4Tw0'
 
-* Result evaluation:
-    We observe several critical words, and compare the frequencies we have with sample program’s result. The document frequencies given by two programs are mostly the same or differed by 1.
+* Additional information:
+** Dealing with non-html documents: We skipped pages with .pdf or .ppt in their urls.
 
-* Multiple-word information:
+** Result evaluation:
+   We observe several critical words, and compare the frequencies we have with sample program’s result. The document frequencies given by two programs are mostly the same or differed by 1.
+
+** Multiple-word information:
     We did not include multiple-word information in the content summaries.
