@@ -4,9 +4,9 @@
   Qi Wang (qw2197), Yongjia Huo (yh2796)
 
 2. Submitted files:
-  main.py – the main program, implement classification and content summary
-  READEME.md
-  folders:
+  * main.py – the main program, implement classification and content summary
+  * READEME.md
+  * folders:
   	* query: 	contain the query text that professor given to us, like Root.txt, Health.txt, Sports.txt, Computer.txt
   	* summary:  contain the content summary for each node
   	* cache: 	cache locally the results that we get from Bing so that we only send a query to Bing if we haven't issued the exact same query before.
