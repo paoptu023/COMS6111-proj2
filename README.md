@@ -26,15 +26,16 @@
 		
     2. Part 2 implements the document sampling and content summary construction algorithm.
 	    1. We retrieve the top-4 pages returned by Bing for each query. To minimize the number of times we call Bing API, we created a cache file for each targeted database, and we will directly parse the cached query results if the file exists.
-	        We use the combine_set() function to create a dictionary doc_sample as document sample, key is category node, value is the set of page urls associated with that node, so duplicate documents are eliminated in the process.
-        2. Having obtained 1 document sample for each category node, we build a content summary associated with each such sample through generate_summary() function. We pass in the category path as input, and for each node in the path, create a node-site.txt file in the summary folder.
-            We use lynx to extract the text of all pages associated with each node, and we skip non-html pages by checking the HTTP header.
-        3. We find the position of "References" in extracted content and ignore any text after it. Then we convert the content to lower case, use process_page() to remove text within brackets "[...]" and special characters, the final string is split by whitespace into a set of terms.
-        4. Finally, we calculate the document frequency of terms with the term sets generated in step 3, and write to node-site.txt.
+	    2. Then we use the combine_set() function to create a dictionary doc_sample as document sample, key is category node, value is the set of page urls associated with that node, so duplicate documents are eliminated in the process.
+        3. Having obtained 1 document sample for each category node, we build a content summary associated with each such sample through generate_summary() function. We pass in the category path as input, and for each node in the path, create a node-site.txt file in the summary folder. 
+        4. We use lynx to extract the text of all pages associated with each node. Text after "References" in extracted content is ignored, text within brackets "[...]" and special characters are also removed. The final string is split by whitespace into a set of terms.
+        5. Finally, we calculate the document frequency of terms with the term sets generated in last step, and write to node-site.txt.
 
 5. Bing Search Account Key: 'HIWkFhlcqfV0SsO9ac7smysylCtGDsuMVyqgSWPPDZI'
 
 6. Additional Information:
+    * Non-html documents: We skipped non-html pages by checking the HTTP header.
+
     * Result evaluation: We compared the document frequencies of some 'true' words with the sample program’s outputs, numbers given by two programs were mostly the same or differed by 1.
 
     * Multiple-word information: We did not include multiple-word information in the content summaries.
