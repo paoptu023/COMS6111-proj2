@@ -1,5 +1,6 @@
 from subprocess import check_output
 import os.path
+import requests
 import urllib2
 import json
 import base64
@@ -90,6 +91,7 @@ def classify(category, path):
 def generate_summary(path):
     # process sample documents from urls
     nodes = path.split('/')
+    # do not have to deal with level 2 categories, only consider the first 2 nodes in path
     for i in range(min(len(nodes), 2)):
         print 'Creating Content Summary for: ' + nodes[i]
         f = open('./summary/' + nodes[i] + '-' + site + '.txt', 'w')
@@ -99,9 +101,11 @@ def generate_summary(path):
         for url in url_set:
             print str(j), '/', len(url_set), ' url'
             j += 1
-            print 'Getting page: ' + url + '\n'
-            # process only html files
-            if url.split('.')[-1] != "pdf" and url.split('.')[-1] != "ppt":
+            print 'Getting page: ' + url
+
+            # check HTTP header and process only text html pages
+            r = requests.get(url, allow_redirects=False)
+            if "text/html" in r.headers["content-type"]:
                 # retrieve page content
                 page_content = ''
                 try:
@@ -119,6 +123,10 @@ def generate_summary(path):
                         content_summary[term] += 1
                     else:
                         content_summary[term] = 1
+            else:
+                print 'Skipped, not html'
+            print ''
+
         for term in sorted(content_summary):
             f.write(term + '#' + str(float(content_summary[term])) + '\n')
         f.close()
@@ -152,8 +160,8 @@ def process_page(page_content):
 
 if __name__ == "__main__":
     account_key = sys.argv[1]
-    tec = int(sys.argv[3])
     tes = float(sys.argv[2])
+    tec = int(sys.argv[3])
     site = sys.argv[4]
 
     print 'Classifying ... '
