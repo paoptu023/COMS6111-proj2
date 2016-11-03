@@ -105,7 +105,7 @@ def generate_summary(path):
 
             # check HTTP header and process only text html pages
             r = requests.get(url, allow_redirects=False)
-            if "text/html" in r.headers["content-type"]:
+            if 'text/html' in r.headers['content-type']:
                 # retrieve page content
                 page_content = ''
                 try:
@@ -158,7 +158,7 @@ def process_page(page_content):
                 skip_bracket = False
     return set(output.split())
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     account_key = sys.argv[1]
     tes = float(sys.argv[2])
     tec = int(sys.argv[3])
