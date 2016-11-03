@@ -33,7 +33,7 @@
         4. Use lynx to extract the text of all pages associated with each node. Text after "References" in extracted content is ignored, text within brackets "[...]" and special characters are also removed. The final string is split by whitespace into a set of terms.
         5. Calculate the document frequency of terms with the term sets generated in last step, and write to node-site.txt.
 
-5. Bing Search Account Key: 'HIWkFhlcqfV0SsO9ac7smysylCtGDsuMVyqgSWPPDZI'
+5. Bing Search Account Key: 'HIWkFhlcqfV0SsO9ac7smysylCtGDsuMVyqgSWPPDZI' or 'VpF0+1+uCEJrUKT5cFOV7eeG8cowehPtdV+sgVA4Tw0'
 
 6. Additional Information:
     * Non-html documents: We skipped non-html pages by checking the HTTP header.
